@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Christine🤍</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffe6f0;
+            color: #ff66b2;
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            font-weight: 500;
+        }
+        .message {
+            background-color: #ffb3d9;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .hidden-message {
+            display: none;
+            font-size: 1.2em;
+            margin-top: 1em;
+            color: #ff3385;
+            transition: opacity 0.5s ease;
+        }
+        .envelope {
+            margin-top: 1em;
+            padding: 15px;
+            font-size: 1.5em;
+            color: #ff66b2;
+            background-color: #ffb3d9;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease;
+        }
+        .envelope:hover {
+            transform: scale(1.05);
+            background-color: #ff3385;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Happy Birthday Christine🤍</h1>
+        <button class="envelope" onclick="revealMessage()">💌</button>
+        <p class="hidden-message" id="specialMessage">
+            I've had feelings for you for a while now, but I haven't really had the guts to confess. I thought today might be perfect, so here I am.<br><br>
+            I like you. Maybe it was your laugh, your eyes, your smile, or your personality—whatever it was, it made me fall pretty damn hard.
+        </p>
+    </div>
+
+    <script>
+        function revealMessage() {
+            const message = document.getElementById("specialMessage");
+            message.style.display = "block";
+            message.style.opacity = "0"; // Start with hidden message
+            setTimeout(() => {
+                message.style.opacity = "1"; // Fade in the message
+            }, 10); // Short delay to allow CSS transition to take effect
+        }
+    </script>
+</body>
+</html>
