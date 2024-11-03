@@ -44,7 +44,7 @@ function accept() {
 
 function decline() {
     const noButton = document.getElementById("noButton");
-    const offsetX = (Math.random() * 140 - 30); // Teleport within a range to avoid overlapping
+    const offsetX = (Math.random() * 60 - 30); // Teleport within a range to avoid overlapping
     const offsetY = (Math.random() * 60 - 30);  // Keep it around the closing note
     noButton.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
 }
